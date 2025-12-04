@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zárthelyi dolgozat - JGYPK</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+            <style>
+                /* Név: Saját Név
+        Neptun kód: XXXXXX
+        */
+
+        /* Alapbeállítások */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* 183. sor */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #3a689f; /* 185. sor */
+        }
+
+        /* ---------------- Fejléc ---------------- */
+        header {
+            background-color: #12479f; /* 186. sor */
+            color: white; /* 187. sor */
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            text-transform: uppercase; /* 37. sor */
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* ---------------- Menü ---------------- */
+        nav {
+            background-color: #00225c; /* 189. sor */
+            width: 100%;
+            text-align: center; /* 38. sor */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: orange; /* 190. sor */
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Menü hover effektus: csere */
+        nav ul li a:hover {
+            background-color: orange;
+            color: #00225c; /* 39. sor */
+        }
+
+        /* ---------------- Fő tároló ---------------- */
+        .container {
+            background-color: white; /* 188. sor */
+            width: 100%;
+            max-width: 1200px; /* 22. sor */
+            min-width: 400px;
+            margin: 0 auto; /* Középre igazítás - 23. sor */
+            padding: 0 0 20px 0;
+        }
+
+        /* Képek reszponzivitása */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .main-image {
+            width: 100%; /* 40. sor */
+            display: block;
+        }
+
+        /* ---------------- Alcímek stílusa ---------------- */
+        /* Vastag vonal balra, vékony fölötte - 62. sor */
+        h2 {
+            color: black;
+            border-left: 8px solid #12479f; /* 191. sor */
+            border-top: 1px solid #12479f;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin-top: 30px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        /* ---------------- Történet blokk ---------------- */
+        #tortenet {
+            padding: 0 20px;
+        }
+
+        #tortenet p {
+            text-align: justify;
+        }
+
+        .history-image {
+            width: 30%; /* 64. sor */
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* ---------------- Kari Naptár (Táblázat) ---------------- */
+        #naptar {
+            padding: 0 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid orange; /* Keret */
+            margin-bottom: 20px;
+        }
+
+        /* Táblázat fejléc */
+        thead th {
+            background-color: orange; /* 192. sor */
+            color: black;
+            font-weight: bold;
+            text-align: center; /* 97. sor */
+            padding: 10px;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid white; /* Belső elválasztók, ha kellenek, vagy üres */
+        }
+
+        /* Első oszlop formázása - 98. sor */
+        .col-first {
+            width: 200px;
+            background-color: #f9dc9b; /* 193. sor */
+            font-style: italic;
+        }
+
+        /* ---------------- Kapcsolat (Űrlap) ---------------- */
+        #kapcsolat {
+            padding: 0 20px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        legend {
+            padding: 0 5px;
+        }
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Inputok szélessége: tároló fele - 132. sor */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 50%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* ---------------- Lábléc ---------------- */
+        footer {
+            background-color: #12479f; /* 186. sor */
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: orange; /* 194. sor */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* Link hover: aláhúzás - 134. sor */
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------------- Reszponzivitás (Mobil nézet) ---------------- */
+        /* 650px alatt - 174. sor */
+        @media screen and (max-width: 650px) {
+            
+            /* Történet kép teljes szélességű és nem úszik */
+            .history-image {
+                width: 100%;
+                float: none;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            /* Input mezők teljes szélességűek - 176. sor */
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+            }
+        }
+     </style>
+    </head>
+<body>
+
+    <header id="nyitolap">
+        <div class="header-content">
+            <h1>SZEGEDI TUDOMÁNYEGYETEM<br>JUHÁSZ GYULA PEDAGÓGUSKÉPZŐ KAR</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#nyitolap">Nyitólap</a></li>
+            <li><a href="#tortenet">Történet</a></li>
+            <li><a href="#naptar">Kari naptár</a></li>
+            <li><a href="#kapcsolat">Kapcsolat</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <img src="images/jgypk_foepulet.jpg" alt="JGYPK Épület" class="main-image">
+
+        <section id="tortenet">
+            <h2>Történet</h2>
+            <div class="content-wrapper">
+                <img src="images/terem.png" alt="Előadóterem" class="history-image">
+                
+                <p>A Szegedi Tudományegyetem Juhász Gyula Pedagógusképző Kara <b>Magyarország legrégebbi tanárképző intézménye</b>. A polgári leány- és fiúiskolák számára 1873-tól képeztek tanárokat Budapesten az akkori tanítónő- és tanítóképző intézetekben. A kezdetben kétéves képzés ideje és színvonala fokozatosan nőtt, így 1918-ban már főiskolai rangot kaptak a tanárképzők.</p>
+                
+                <p><b>1928-ban került városunkba</b>, Szegedre a tanárképzés Klebelsberg Kuno kultuszminiszter reformjainak köszönhetően. E reformok keretében egységesítette a polgári iskolai tanárképzést, képzési idejét 4 évre emelte, s összekapcsolta az egyetemi képzéssel. A gyakorlati képzés céljára gyakorló polgári iskolát hozott létre. Ezek az események szervesen illeszkedtek abba a nagyszabású kultúrpolitikai koncepcióba, amelynek köszönhetően a '20-as években Szeged diákvárossá s a régió szellemi központjává vált.</p>
+                
+                <p><b>1948-ban a polgári iskolák megszűnésével</b> a polgári iskolai tanárképzés is befejeződött, s <b>az intézmény pedagógiai főiskolává vált</b>. A korszakra jellemző oktatáspolitikai törekvéseknek megfelelően a negyvenes és az ötvenes években többször módosították a tanárképzést, végül 1964-re alakult ki az a négyéves, kétszakos képzés, amely egészen a közelmúltig folyt a karon. Az intézmény 1973-ban, a Tanárképzés centenáriuma alkalmából vette fel a szegedi költő nevét.</p>
+                
+                <div style="clear: both;"></div>
+            </div>
+        </section>
+
+        <section id="naptar">
+            <h2>Kari Naptár</h2>
+            <p style="text-align: center;">Kari Naptár</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">2025/2026. tanév rendje I. félév</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-first">Szorgalmi időszak</td>
+                        <td>2025. szeptember 8 - 2025. december 13.</td>
+                    </tr>
+                    <tr>
+                        <td class="col-first">Vizsgaidőszak</td>
+                        <td>2025. december 15 - 2026. január 31.</td>
+                    </tr>
+                    <tr>
+                        <td class="col-first">Téli szünet</td>
+                        <td>2025. december 24 - 2025. január 3.</td>
+                    </tr>
+                    <tr>
+                        <td class="col-first">Záróvizsga</td>
+                        <td>2026. január 12 - január 16.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="kapcsolat">
+            <h2>Kapcsolat</h2>
+            <form action="#">
+                <fieldset>
+                    <legend>Lépjen kapcsolatba velünk</legend>
+                    
+                    <label for="nev">Név</label><br>
+                    <input type="text" id="nev" name="nev" placeholder="Mekk Elek"><br>
+
+                    <label for="email">E-mail cím</label><br>
+                    <input type="email" id="email" name="email" placeholder="elek@mekk.hu"><br>
+
+                    <label for="uzenet">Milyen ügyben kér információt?</label><br>
+                    <textarea id="uzenet" name="uzenet" rows="4"></textarea><br>
+
+                    <label for="kar">Az egyetem más karának hallgatója vagyok</label>
+                    <select id="kar" name="kar">
+                        <option value="nem">Nem</option>
+                        <option value="ttik">TTIK</option>
+                        <option value="btk">BTK</option>
+                        <option value="gtk">GTK</option>
+                    </select>
+                    <br><br>
+                    <button type="submit">Küld</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </div> <footer>
+        <a href="https://neptun.u-szeged.hu/" target="_blank">Neptun</a>
+        <a href="https://www.coospace.u-szeged.hu/" target="_blank">Coospace</a>
+        <a href="https://modulo.u-szeged.hu/" target="_blank">Modulo</a>
+    </footer>
+
+</body>
+</html>
